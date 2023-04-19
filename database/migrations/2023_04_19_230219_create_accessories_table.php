@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('accessories', function (Blueprint $table) {
             $table->id();
+
+            //Campos da tabela
+            $table->string('accessory', 20);
+
             $table->timestamps();
         });
     }

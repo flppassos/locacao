@@ -11,14 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rents', function (Blueprint $table) {
+        Schema::create('accessory_car', function (Blueprint $table) {
             $table->id();
-
-            //Campos da tabela
-            $table->dateTime('inicio');
-            $table->dateTime('fim');
-            $table->decimal('total');
-
             $table->timestamps();
         });
     }
@@ -28,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rents');
+        Schema::dropIfExists('accessory_car');
     }
 };

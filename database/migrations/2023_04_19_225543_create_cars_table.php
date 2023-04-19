@@ -13,6 +13,17 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
+
+            //Campos da tabela
+            $table->string('placa', 8);
+            $table->string('modelo', 50);
+            $table->string('marca', 50);
+            $table->year('ano');
+            $table->text('descricao');
+            $table->string('cor', 20);
+            $table->string('chassi', 17);
+            $table->decimal('diaria');
+
             $table->timestamps();
         });
     }
