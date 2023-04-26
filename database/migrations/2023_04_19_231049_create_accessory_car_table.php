@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('accessory_car', function (Blueprint $table) {
             $table->id();
+
+            //Chaves estrangeiras para as tabelas Accessory e Car
+            $table->foreignId('accessory_id')->constrained()->restrictOnDelete();
+            $table->foreignId('car_id')->constrained()->restrictOnDelete();
+
             $table->timestamps();
         });
     }

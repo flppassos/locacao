@@ -18,6 +18,10 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+
+            //Chave estrangeira para a tabela Profile
+            $table->foreignId('profile_id')->constrained()->restrictOnDelete();
+
             $table->timestamps();
         });
     }

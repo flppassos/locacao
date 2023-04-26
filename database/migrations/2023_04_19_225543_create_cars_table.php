@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('modelo', 50);
             $table->string('marca', 50);
             $table->year('ano');
-            $table->text('descricao');
+            $table->text('descricao')->nullable();
             $table->string('cor', 20);
             $table->string('chassi', 17);
             $table->decimal('diaria');

@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
 
-            //Campos da tabela
+            //Campos da tabela profile
             $table->string('nome', 20);
-
             $table->timestamps();
         });
     }

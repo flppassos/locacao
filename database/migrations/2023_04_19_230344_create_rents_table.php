@@ -19,6 +19,11 @@ return new class extends Migration
             $table->dateTime('fim');
             $table->decimal('total');
 
+            //Chave estrangeira para cliente
+            $table->foreignId('client_id')->constrained()->restrictOnDelete();
+            $table->foreignId('car_id')->constrained()->restrictOnDelete();
+            $table->foreignId('user_id')->constrained()->restrictOnDelete();
+
             $table->timestamps();
         });
     }
