@@ -12,7 +12,15 @@
 </head>
 <body>
 
-    {{ $slot }}
+    {{-- Menu Lateral --}}
+    <x-admin.menu-lateral />
+
+    {{-- Conteudo Principal --}}
+    <main class="ml-auto mb-6 w-[85%]">
+        <div class="px-6 pt-6">
+            {{ $slot }}
+        </div>
+    </main>
 
 </body>
 </html>
