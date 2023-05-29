@@ -16,7 +16,9 @@ class Carros extends Component
 
     public function __construct()
     {
-        $carros = Car::all();
+        $this->carros = Car::all();
+
+        // dd($this->carros);
     }
 
     /**
