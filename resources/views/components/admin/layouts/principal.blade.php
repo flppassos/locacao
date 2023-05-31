@@ -7,8 +7,9 @@
 
     {{-- Importar o Tailwind para o projeto--}}
     <script src="https://cdn.tailwindcss.com"></script>
-
     <title>Locadora de Veículos - Dashboard</title>
+
+    @livewireStyles
 </head>
 <body>
 
@@ -22,5 +23,6 @@
         </div>
     </main>
 
+    @livewireScripts
 </body>
 </html>
