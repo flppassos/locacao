@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     {{-- Importar o Tailwind para o projeto--}}
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     <title>Locadora de Veículos - Dashboard</title>
 
     @livewireStyles

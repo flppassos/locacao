@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Admin\Carros\Carros;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ Route::get('/', function () {
     return view('inicial');
 });
 
-Route::get('/carros', function () {
-    return view('admin.carros');
-});
+Route::get('/carros', Carros::class);
+
+// Route::get('/carros', function () {
+//     return view('admin.carros');
+// });
