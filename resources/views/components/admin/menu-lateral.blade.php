@@ -35,7 +35,7 @@
 
             {{-- Clientes --}}
             <li>
-                <a href="#" class="px-2 py-3 flex items-center space-x-4 text-amber-500 group">
+                <a href="/carros/inserir" class="px-2 py-3 flex items-center space-x-4 text-amber-500 group">
 
                     {{-- Ícone --}}
                     <span class="group-hover:text-amber-700">

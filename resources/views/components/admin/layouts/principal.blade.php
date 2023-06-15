@@ -7,6 +7,9 @@
 
     {{-- Importar o Tailwind para o projeto--}}
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    {{-- Importar arquivo css para o componentem Loading --}}
+    <link rel="stylesheet" href="{{asset('css/loading.css')}}">
+
     <title>Locadora de Veículos - Dashboard</title>
 
     @livewireStyles
@@ -24,5 +27,9 @@
     </main>
 
     @livewireScripts
+    {{-- Script para simular o comportamento de um SPA com os componentes Livewire --}}
+    <script type="module">
+        import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+    </script>
 </body>
 </html>

@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin\Carros;
 use App\Models\Car;
 use Livewire\Component;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\DB;
 
 class Carros extends Component
 {
@@ -29,11 +30,16 @@ class Carros extends Component
             // Pesquisa retorna todos os dados
             $this->carros = Car::all();
         }
-        return $this->carros = Car::where('modelo', 'like', "%$this->pesquisa%")
+        else {
+            // DB::enableQueryLog();
+
+            $this->carros = Car::where('modelo', 'like', "%$this->pesquisa%")
                                     ->orWhere('marca', 'like', "%$this->pesquisa%")
                                     ->orWhere('placa', 'like', "%$this->pesquisa%")
                                     ->orWhere('cor', 'like', "%$this->pesquisa%")
                                     ->get();
+            // dd(DB::getQueryLog());
+        }
     }
 
     public function render()

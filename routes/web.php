@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Carros\Carros;
+use App\Http\Livewire\Admin\Carros\CarrosForm;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/carros', Carros::class);
+Route::get('/carros/inserir', CarrosForm::class);
 
 // Route::get('/carros', function () {
 //     return view('admin.carros');
