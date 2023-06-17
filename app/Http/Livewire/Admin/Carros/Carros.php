@@ -13,16 +13,17 @@ class Carros extends Component
     public Collection $carros;
     //Atributo para o campo de pesquisa na tela
     public string $pesquisa = '';
+    protected $listeners = ['eventoDeletar' => 'deletar'];
 
     /**
      * Create a new component instance.
      */
-    public function __construct()
-    {
-        $this->carros = Car::all();
+    // public function __construct()
+    // {
+    //     $this->carros = Car::all();
 
-        // dd($this->carros);
-    }
+    //     // dd($this->carros);
+    // }
 
     public function filtrarDados()
     {
@@ -40,6 +41,13 @@ class Carros extends Component
                                     ->get();
             // dd(DB::getQueryLog());
         }
+    }
+
+    public function deletar($id)
+    {
+        Car::destroy($id);
+        // session()->flash('toast', 'Registro deletado com sucesso!');
+        $this->emit('toast', 'Registro deletado com sucesso.');
     }
 
     public function render()

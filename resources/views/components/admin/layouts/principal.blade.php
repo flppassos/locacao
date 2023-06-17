@@ -37,7 +37,7 @@
     {{-- Tem que aparecer depois do script do toast --}}
     {{-- Quando uma página que usa esse layout for exibida,
         vai verificar se tem algum toast na sessao e exibir --}}
-    @if (session()->has('toast'))
+    {{-- @if (session()->has('toast'))
     <script>
         Toastify({
             text: "{{ session('toast') }}",
@@ -53,7 +53,16 @@
             onClick: function() {} // Callback after click
         }).showToast();
     </script>
-    @endif
+    @endif --}}
+
+    <script>
+        Livewire.on('confirmarDeletar', (id) => {
+            if(confirm('Deseja mesmo deletar?')){
+                Livewire.emit('eventoDeletar', id);
+            }
+        });
+    </script>
+    <livewire:toast />
 
     {{-- Script para simular o comportamento de um SPA com os componentes Livewire
     <script type="module">
