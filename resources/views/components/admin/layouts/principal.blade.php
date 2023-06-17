@@ -10,6 +10,9 @@
     {{-- Importar arquivo css para o componentem Loading --}}
     <link rel="stylesheet" href="{{asset('css/loading.css')}}">
 
+    {{-- Toastfy --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <title>Locadora de Veículos - Dashboard</title>
 
     @livewireStyles
@@ -27,9 +30,34 @@
     </main>
 
     @livewireScripts
-    {{-- Script para simular o comportamento de um SPA com os componentes Livewire --}}
+
+    {{-- Script do Toastfy --}}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    {{-- Tem que aparecer depois do script do toast --}}
+    {{-- Quando uma página que usa esse layout for exibida,
+        vai verificar se tem algum toast na sessao e exibir --}}
+    @if (session()->has('toast'))
+    <script>
+        Toastify({
+            text: "{{ session('toast') }}",
+            duration: 3000, //ms
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "#ccfbf1",
+                borderTop: '4px solid #14b8a6',
+                color: "#134e4a"
+            },
+            onClick: function() {} // Callback after click
+        }).showToast();
+    </script>
+    @endif
+
+    {{-- Script para simular o comportamento de um SPA com os componentes Livewire
     <script type="module">
         import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
-    </script>
+    </script> --}}
 </body>
 </html>
