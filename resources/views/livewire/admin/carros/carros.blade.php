@@ -38,7 +38,7 @@
                 </tr>
             @empty
                 <tr class="bg-amber-600 border-b border-amber-300 hover:bg-amber-500">
-                    <td colspan="5" class="px-4 py-3">Nenhum registro encontrado.</td>
+                    <td colspan="6" class="px-4 py-3">Nenhum registro encontrado.</td>
                 </tr>
             @endforelse
 
