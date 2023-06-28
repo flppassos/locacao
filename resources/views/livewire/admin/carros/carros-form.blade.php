@@ -5,7 +5,7 @@
         {{-- Placa --}}
         <label>
             <span class="text-gray-700">Placa</span>
-            <x-admin.input type="text" wire:model="carro.placa" />
+            <x-admin.input type="text" wire:model.lazy="carro.placa" />
 
             @error('carro.placa')
                 <span class="text-red-400">
@@ -17,7 +17,7 @@
         {{-- Marca --}}
         <label>
             <span class="text-gray-700">Marca</span>
-            <x-admin.input type="text" wire:model="carro.marca" />
+            <x-admin.input type="text" wire:model.lazy="carro.marca" />
 
             @error('carro.marca')
                 <span class="text-red-400">
@@ -29,7 +29,7 @@
         {{-- Modelo --}}
         <label>
             <span class="text-gray-700">Modelo</span>
-            <x-admin.input type="text" wire:model="carro.modelo" />
+            <x-admin.input type="text" wire:model.lazy="carro.modelo" />
 
             @error('carro.modelo')
                 <span class="text-red-400">
@@ -41,7 +41,7 @@
         {{-- Ano --}}
         <label>
             <span class="text-gray-700">Ano</span>
-            <x-admin.input type="number" wire:model="carro.ano" />
+            <x-admin.input type="number" wire:model.lazy="carro.ano" />
 
             @error('carro.ano')
                 <span class="text-red-400">
@@ -53,7 +53,7 @@
         {{-- Cor --}}
         <label>
             <span class="text-gray-700">Cor</span>
-            <x-admin.input type="text" wire:model="carro.cor" />
+            <x-admin.input type="text" wire:model.lazy="carro.cor" />
 
             @error('carro.cor')
                 <span class="text-red-400">
@@ -65,7 +65,7 @@
         {{-- Chassi --}}
         <label>
             <span class="text-gray-700">Chassi</span>
-            <x-admin.input type="text" wire:model="carro.chassi" />
+            <x-admin.input type="text" wire:model.lazy="carro.chassi" />
 
             @error('carro.chassi')
                 <span class="text-red-400">
@@ -77,7 +77,7 @@
         {{-- Diaria --}}
         <label>
             <span class="text-gray-700">Diária</span>
-            <x-admin.input type="number" step="any" min="0" wire:model="carro.diaria" />
+            <x-admin.input type="number" step="any" min="0" wire:model.lazy="carro.diaria" />
 
             @error('carro.diaria')
                 <span class="text-red-400">
@@ -89,7 +89,7 @@
         {{-- Descrição --}}
         <label>
             <span class="text-gray-700">Descrição</span>
-            <x-admin.text-area wire:model="carro.descricao" />
+            <x-admin.text-area wire:model.lazy="carro.descricao" />
 
             @error('carro.descricao')
                 <span class="text-red-400">

@@ -32,6 +32,8 @@
                     <td class="px-4 py-3">{{$carro->cor}}</td>
                     <td class="px-4 py-3">{{$carro->diaria}}</td>
                     <td class="px-4 py-3">
+                        {{-- Botão editar --}}
+                        <x-admin.button-edit href="/carros/{{$carro->id}}/editar"/>
                         {{-- Botão deletar --}}
                         <x-admin.button-delete wire:click="$emit('confirmarDeletar', '{{$carro->id}}')"/>
                     </td>

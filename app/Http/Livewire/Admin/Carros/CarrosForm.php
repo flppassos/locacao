@@ -29,8 +29,10 @@ class CarrosForm extends Component
         'carro.diaria' => 'required|decimal:0,2|bail',
     ];
 
-    public function mount(){
-        $this->carro = new Car();
+    public function mount(Car $carro)
+    {
+        // dd($carro);
+        $this->carro = $carro;
     }
 
     // O método updated é chamado automaticamente pelo Livewire sempre que uma propriedade

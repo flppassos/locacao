@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::get('/carros', Carros::class);
 Route::get('/carros/inserir', CarrosForm::class);
+Route::get('/carros/{carro}/editar', CarrosForm::class);
 
 // Route::get('/carros', function () {
 //     return view('admin.carros');
